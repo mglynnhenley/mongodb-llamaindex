@@ -32,10 +32,10 @@ multidict==6.0.4
 mypy-extensions==1.0.0
 nest-asyncio==1.5.8
 nltk==3.8.1
-numpy==1.26.1
+# numpy==1.26.1
 openai==0.28.1
 packaging==23.2
-pandas==2.1.2
+# pandas==2.1.2
 pydantic==2.4.2
 pydantic_core==2.10.1
 pymongo==4.5.0
@@ -51,10 +51,10 @@ SQLAlchemy==2.0.22
 tenacity==8.2.3
 tiktoken==0.5.1
 tqdm==4.66.1
-typing-inspect==0.9.0
-typing_extensions==4.8.0
-tzdata==2023.3
-urllib3==1.26.18
+# typing-inspect==0.9.0
+# typing_extensions==4.8.0
+# tzdata==2023.3
+# urllib3==1.26.18s
 Werkzeug==2.2.3
 wrapt==1.15.0
 yarl==1.9.2

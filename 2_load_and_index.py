@@ -13,7 +13,7 @@ load_dotenv()
 # logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 import os
-from llama_index.readers.mongo import SimpleMongoReader
+from mongo_client_personalised import SimpleMongoReader
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
@@ -28,7 +28,7 @@ reader = SimpleMongoReader(uri=os.getenv("MONGODB_URI"))
 documents = reader.load_data(
     os.getenv("MONGODB_DATABASE"),
     os.getenv("MONGODB_COLLECTION"), # this is the collection where the objects you loaded in 1_import got stored
-    field_names=["full_text"], # these is a list of the top-level fields in your objects that will be indexed
+    field_names=["comment", "speaker", "speeches"], # these is a list of the top-level fields in your objects that will be indexed
                                # make sure your objects have a field called "full_text" or that you change this value
     query_dict=query_dict # this is a mongo query dict that will filter your data if you don't want to index everything
 )
